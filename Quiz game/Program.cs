@@ -10,8 +10,14 @@ namespace Quiz_game
     {
         static void Main(string[] args)
         {
-          
+            string play;
+            string answer;
+            int score = 0;
 
+            Console.WriteLine("Welcome to my computer quiz!");
+            Console.Write("Do you want to play a game to test your knowledge? Y-yes or N-no: ");
+            
+           
         }
     }
 }
