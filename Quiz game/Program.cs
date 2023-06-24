@@ -12,8 +12,8 @@ namespace Quiz_game
         static void Main(string[] args)
         {
             string play;
-            string answer;
-            int score = 0;
+            
+          
 
             Console.WriteLine("Welcome to my computer quiz!");
             Console.Write("Do you want to play a game to test your knowledge? Y-yes or N-no: ");
@@ -25,34 +25,44 @@ namespace Quiz_game
             }
             else
             {
-                Console.WriteLine("Okay! Let's test your knowledge!");
-                Console.Write("What does CPU stand for?: ");
-                answer = Console.ReadLine();
+                play_game();
+            }
+                
+        }
+        static void play_game()
+        {
+            string answer;
+            float score = 0;
+            float score2;
 
-                if (answer.ToLower() == "central processing unit")
-                {
-                    Console.WriteLine("Correct!");
-                  
-                    score += 1;
-                }
-                else
-                {
-                    Console.WriteLine("Incorrect!");
-                }
+            Console.WriteLine("Okay! Let's test your knowledge!");
+            Console.Write("What does CPU stand for?: ");
+            answer = Console.ReadLine();
 
-                Console.Write("What does GPU stand for?: ");
-                answer = Console.ReadLine();
+            if (answer.ToLower() == "central processing unit")
+            {
+                Console.WriteLine("Correct!");
 
-                if (answer.ToLower() == "graphics processing unit")
-                {
-                    Console.WriteLine("Correct!");
+                score += 1;
+            }
+            else
+            {
+                Console.WriteLine("Incorrect!");
+            }
 
-                    score += 1;
-                }
-                else
-                {
-                    Console.WriteLine("Incorrect!");
-                }
+            Console.Write("What does GPU stand for?: ");
+            answer = Console.ReadLine();
+
+            if (answer.ToLower() == "graphics processing unit")
+            {
+                Console.WriteLine("Correct!");
+
+                score += 1;
+            }
+            else
+            {
+                Console.WriteLine("Incorrect!");
+            }
 
                 Console.Write("What does RAM stand for?: ");
                 answer = Console.ReadLine();
@@ -109,10 +119,10 @@ namespace Quiz_game
                 {
                     Console.WriteLine("Incorrect!");
                 }
-                Console.Write("Which language defines meaning and structure of web content?: ");
+                Console.Write("What is the standard language for storing, manipulating and retrieving data in databases?: ");
                 answer = Console.ReadLine();
 
-                if (answer.ToLower() == "html")
+                if (answer.ToLower() == "sql")
                 {
                     Console.WriteLine("Correct!");
 
@@ -164,10 +174,12 @@ namespace Quiz_game
                 {
                     Console.WriteLine("Incorrect!");
                 }
-            }
+            
             Console.WriteLine("Total score is: " + score);
             Console.ReadKey();
-
+            score2 = (score / (float)10);
+            Console.WriteLine("You got: " + (score2 * 100) + "%");
+            Console.ReadKey();
         }
     }
 }
