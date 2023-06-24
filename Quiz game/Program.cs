@@ -165,7 +165,7 @@ namespace Quiz_game
                     Console.WriteLine("Incorrect!");
                 }
             }
-            Console.WriteLine("Total score is: "+score);
+            Console.WriteLine("Total score is: " + score);
             Console.ReadKey();
 
         }
