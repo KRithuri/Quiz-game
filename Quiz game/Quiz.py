@@ -8,5 +8,10 @@ def play_game():
     if answer.lower() == "central  processing unit":
         print("Correct!")
         score += 1
+    else:
+        print("Incorrrect!")
     
     answer = input("What does GPU stand for? ")
+    if answer.lower() == "graphics processing unit":
+        print("Correct!")
+        score += 1
