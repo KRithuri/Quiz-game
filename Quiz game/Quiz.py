@@ -92,3 +92,6 @@ def main():
         quit()
     else:
         play_game()
+
+#call main function
+main()
