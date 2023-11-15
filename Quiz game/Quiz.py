@@ -65,3 +65,11 @@ def play_game():
         score += 1
     else:
         print("Incorrrect!")
+
+    answer = input("What is the standard language for storing, manipulating and retrieving data in databases? ")
+    if answer.lower() == "sql":
+        print("Correct!")
+        score += 1
+    else:
+        print("Incorrrect!")
+
