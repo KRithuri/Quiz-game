@@ -37,3 +37,4 @@ def play_game():
     else:
         print("Incorrrect!")
 
+    print("Almost done! Let's move to programming questions!") #indicate to user the switch of question sections
