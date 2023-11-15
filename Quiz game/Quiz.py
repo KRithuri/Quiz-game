@@ -5,7 +5,7 @@ def play_game():
     score = 0
 
     answer = input("What does CPU stand for? ")
-    if answer.lower() == "central  processing unit":
+    if answer.lower() == "central processing unit":
         print("Correct!")
         score += 1 #increment if answer is correct
     else:
@@ -46,7 +46,7 @@ def play_game():
     else:
         print("Incorrrect!")
     answer = input("What does JS stand for? ")
-    if answer.lower() == "java script":
+    if answer.lower() == "javascript":
         print("Correct!")
         score += 1
     else:
