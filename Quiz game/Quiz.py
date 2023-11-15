@@ -58,3 +58,10 @@ def play_game():
         score += 1
     else:
         print("Incorrrect!")
+
+    answer = input("What is used to style an HTML document? ")
+    if answer.lower() == "css":
+        print("Correct!")
+        score += 1
+    else:
+        print("Incorrrect!")
