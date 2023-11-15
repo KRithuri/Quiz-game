@@ -38,3 +38,10 @@ def play_game():
         print("Incorrrect!")
 
     print("Almost done! Let's move to programming questions!") #indicate to user the switch of question sections
+
+    answer = input("Which language defines meaning and structure of web content? ")
+    if answer.lower() == "html":
+        print("Correct!")
+        score += 1
+    else:
+        print("Incorrrect!")
