@@ -45,3 +45,9 @@ def play_game():
         score += 1
     else:
         print("Incorrrect!")
+    answer = input("What does JS stand for? ")
+    if answer.lower() == "java script":
+        print("Correct!")
+        score += 1
+    else:
+        print("Incorrrect!")
