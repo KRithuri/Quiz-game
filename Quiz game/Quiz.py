@@ -75,3 +75,6 @@ def play_game():
 
     # print final score
     print("You got ", str(score), " questions correct!")
+
+    # print final score as a percentage
+    print("You got ", str((score/10)*100), "%")
