@@ -82,3 +82,5 @@ def play_game():
 
 #main function 
 def main():
+     # ask user input
+    print("Welcome to my computer quiz!")
