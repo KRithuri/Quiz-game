@@ -84,3 +84,11 @@ def play_game():
 def main():
      # ask user input
     print("Welcome to my computer quiz!")
+    play = input("Do you want to play a game to test your knowledge? Y-yes N-no: ")
+
+    # check answer from user on the question asked
+    # if answer is no, exit the program
+    if play.upper() != 'Y':
+        quit()
+    else:
+        play_game()
