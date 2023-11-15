@@ -51,3 +51,10 @@ def play_game():
         score += 1
     else:
         print("Incorrrect!")
+
+    answer = input("Which language is the .py extension for? ")
+    if answer.lower() == "python":
+        print("Correct!")
+        score += 1
+    else:
+        print("Incorrrect!")
