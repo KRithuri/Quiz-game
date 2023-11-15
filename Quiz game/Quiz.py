@@ -73,3 +73,5 @@ def play_game():
     else:
         print("Incorrrect!")
 
+    # print final score
+    print("You got ", str(score), " questions correct!")
