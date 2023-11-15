@@ -24,3 +24,10 @@ def play_game():
     else:
         print("Incorrrect!")
 
+    answer = input("What does SSD stand for? ")
+    if answer.lower() == "solid state drive":
+        print("Correct!")
+        score += 1
+    else:
+        print("Incorrrect!")
+
