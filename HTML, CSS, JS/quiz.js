@@ -16,3 +16,7 @@ exitBtn.onclick = () => {
     popupInfo.classList.remove('active');
     main.classList.remove('active');
 }
+//function to execute when continue button is clicked
+continueBtn.onclick = () => {
+    quizSection.classList.add('active');
+}
