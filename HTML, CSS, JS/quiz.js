@@ -6,3 +6,8 @@ const exitBtn = document.querySelector('.exit-btn'); //fetch exit button
 startBtn.onclick = () => {
     popupInfo.classList.add('active');
 }
+
+//function to execute when exit button is clicked
+exitBtn.onclick = () => {
+    popupInfo.classList.remove('active');
+}
