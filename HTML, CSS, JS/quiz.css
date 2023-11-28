@@ -41,16 +41,18 @@ span{
     transition: .3s;
 }
 .navbar a:hover,
-.navbar a:active{
+.navbar a.active{
     color: cyan;
 }
 .main{
     min-height: 100vh;
-    background: linear-gradient(to left, #b8860b, #ff8c00, #ffd700, #ffff00 );
+    background: url('download.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
     transition: .3s ease;
     pointer-events: auto;
 }
-.main.active{
+/*.main.active{
     filter: blur(15px);
     pointer-events: none;
 }
@@ -128,8 +130,8 @@ span{
     color: #333;
     font-weight: 500;
     margin: 4px 0;
-}
-.popup-info .btn-group{
+} */
+/* .popup-info .btn-group{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -166,4 +168,4 @@ span{
 .popup-info .btn-group .info-btn:nth-child(2):hover{
     background: blue;
     border-color: blue;
-}
+} */
