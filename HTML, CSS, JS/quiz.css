@@ -1,199 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,300&display=swap');
-
+/* 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+} */
+
+:root{
+    background-color: lightblue;
+    font-size: 62.5%;
 }
-body{
-    color: #fff;
-    background: #09001d;
-    overflow: hidden;
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+h1, h2, h3, h4{
+    margin-bottom: 1rem;
 }
-.logo{
-    font-size: 32px;
-    color: darkblue;
-    text-decoration: none;
-    font-weight: 700;
-    filter: drop-shadow(0 0 5px #09001d);
+h1{
+    font-size: 5.4rem;
+    color: #191970;
+    margin-bottom:  5rem;
 }
-.logo-span{
-    color: cyan;
-}
-.navbar a{
-    font-size: 18px;
-    color: #fff;
-    text-decoration: none;
+h1 > span{
+    font-size: 2.4rem;
     font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
 }
-.navbar a:hover,
-.navbar a.active{
-    color: cyan;
+h2{
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
 }
-.main{
-    min-height: 100vh;
-    background: url('download.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: .3s ease;
-    pointer-events: auto;
-}
-.main.active{
-    filter: blur(15px);
-    pointer-events: none;
+h3{
+    font-size: 2.8rem;
+    font-weight: 500;
 }
 .container{
-    display: flex;
+    width: 100vw;
     height: 100vh;
-    width: 200%;
-}
-.home{
-    position: relative;
-    /* left: -50%; */
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 80 rem;
+    margin: 0 auto;
 }
-.home-content{
-    max-width: 600px;
+.container > * {
+    width: 100%;
+}
+.flex-column{
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
-.home-content h1{
-    font-size: 78px;
-    font-weight: 700;
-    text-shadow: 0 0 10px rgba(0, 0, 0, .3);
+.flex-center{
+   justify-content: center;
+   align-items: center;
 }
-.home-content p{
-    font-size: 16px;
+.justify-center{
+    justify-content: center;
+}
+.text-center{
     text-align: center;
-    text-shadow: 0 0 10px rgba(0, 0, 0, .3);
-    margin-bottom: 30px;
 }
-.home-content .start-btn{
-    width: 190px;
-    height: 55px;
-    background: #09001d;
-    border: 2px solid #fff;
-    outline: none;
-    border-radius: 6px;
-    box-shadow: 0 0 10px #09001d;
-    font-size: 18px;
-    color: #fff;
-    letter-spacing: 1px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: .5s;
+.hidden{
+    display: none;
 }
-.home-content .start-btn:hover{
-    background: orangered;
-    box-shadow: none;
-}
-.popup-info{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(.9);
-    width: 500px;
-    background: orangered;
-    border-radius: 6px;
-    padding: 10px 25px;
-    opacity: 0;
-    pointer-events: none;
-    transition: .3s ease;
-}
-.popup-info.active{
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate(-50%, -50%) scale(1);
-}
-.popup-info h2{
-    font-size: 50px;
-    color: darkblue;
-}
-.popup-info .info{
-    display: inline-block;
-    font-size: 16px;
-    color: #333;
-    font-weight: 500;
-    margin: 4px 0;
-}
-.popup-info .btn-group{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #999;
-    margin-top: 10px;
-    padding: 15px 0 7px;
-}
-.popup-info .btn-group .info-btn{
-    width: 130px;
-    height: 45px;
-    background: lightblue;
-    border: 2px solid lightblue;
-    outline: none;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 16px;
-    color: #09001d;
-    font-weight: 600;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    cursor: pointer;
-    transition: .5s;
-}
-.popup-info .btn-group .info-btn:nth-child(1){
-    background: transparent;
-    color: darkblue;
-}
-.popup-info .btn-group .info-btn:nth-child(1):hover{
-    background: lightblue;
-    color: #09001d;
-}
-.popup-info .btn-group .info-btn:nth-child(2):hover{
-    background: blue;
-    border-color: blue;
-}
-.quiz-section{
-    position: relative;
-    width: 100%;
-    background: linear-gradient(to left, #ff8c00, #ffd700, #ffa500, #ff4500);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-    /* transition: .8s ease-in-out;
-    transition-delay: .25s; */
-}
-.quiz-section.active{
-    left: 0;
-} 
-.quiz-section .quiz-box{
-    position: relative;
-    width: 500px;
-    background: transparent;
-    border: 2px solid #09001d;
-    border-radius: 6px;
-    display: flex;
-    flex-direction: column;
-    padding: 20px 30px;
-}
+
