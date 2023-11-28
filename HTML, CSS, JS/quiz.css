@@ -7,8 +7,9 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    color: #09001d;
-    background: lightcyan;
+    color: #fff;
+    background: #09001d;
+    overflow: hidden;
 }
 .header{
     position: fixed;
@@ -29,7 +30,7 @@ body{
     font-weight: 700;
     filter: drop-shadow(0 0 5px #09001d);
 }
-span{
+.logo-span{
     color: cyan;
 }
 .navbar a{
@@ -52,15 +53,18 @@ span{
     transition: .3s ease;
     pointer-events: auto;
 }
-/*.main.active{
+.main.active{
     filter: blur(15px);
     pointer-events: none;
 }
 .container{
     display: flex;
     height: 100vh;
+    width: 200%;
 }
 .home{
+    position: relative;
+    /* left: -50%; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -86,11 +90,11 @@ span{
 .home-content .start-btn{
     width: 190px;
     height: 55px;
-    background: darkcyan;
+    background: #09001d;
     border: 2px solid #fff;
     outline: none;
     border-radius: 6px;
-    box-shadow: 0 0 10px darkcyan;
+    box-shadow: 0 0 10px #09001d;
     font-size: 18px;
     color: #fff;
     letter-spacing: 1px;
@@ -99,7 +103,7 @@ span{
     transition: .5s;
 }
 .home-content .start-btn:hover{
-    background: #09001d;
+    background: orangered;
     box-shadow: none;
 }
 .popup-info{
@@ -108,7 +112,7 @@ span{
     left: 50%;
     transform: translate(-50%, -50%) scale(.9);
     width: 500px;
-    background: darkcyan;
+    background: orangered;
     border-radius: 6px;
     padding: 10px 25px;
     opacity: 0;
@@ -130,8 +134,8 @@ span{
     color: #333;
     font-weight: 500;
     margin: 4px 0;
-} */
-/* .popup-info .btn-group{
+}
+.popup-info .btn-group{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -168,4 +172,28 @@ span{
 .popup-info .btn-group .info-btn:nth-child(2):hover{
     background: blue;
     border-color: blue;
-} */
+}
+.quiz-section{
+    position: relative;
+    width: 100%;
+    background: linear-gradient(to left, #ff8c00, #ffd700, #ffa500, #ff4500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    /* transition: .8s ease-in-out;
+    transition-delay: .25s; */
+}
+.quiz-section.active{
+    left: 0;
+} 
+.quiz-section .quiz-box{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid #09001d;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+}
