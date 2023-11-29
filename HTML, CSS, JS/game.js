@@ -62,7 +62,21 @@ startGame = () => {
     score = 0;
     availableQuestions = [...questions];
     console.log(availableQuestions);
+    getNewQuestion()
 }
 
+//funtion to get new question
+getNewQuestion = () => {
+    questionCounter++;
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionIndex];
+    question.innerText = currentQuestion.question;
+
+    //grab choices
+    choices.forEach(choice => {
+        const number = choice.dataset["number"]; //access attributes
+        choice.innerText = currentQuestion["choice" + number];
+    });
+};
 //call function
 startGame();
