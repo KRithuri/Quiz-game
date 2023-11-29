@@ -55,3 +55,14 @@ let questions = [
 //Constants
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 3;
+
+//function to start game
+startGame = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questions];
+    console.log(availableQuestions);
+}
+
+//call function
+startGame();
