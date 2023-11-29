@@ -4,6 +4,7 @@ const choices = Array.from(document.getElementsByClassName("choice-text")); //ge
 let currentQuestion = {}; //empty array
 let acceptingAnswers = true;
 let score = 0; //score variable
+let questionCounter = 0; //variable for question answer
 
 
 
