@@ -2,7 +2,7 @@ const question = document.getElementById("question"); //get question
 const choices = Array.from(document.getElementsByClassName("choice-text")); //get choice text and createlet currentQuestion = {};
 
 let currentQuestion = {}; //empty array
-let acceptingAnswers = true;
+let acceptingAnswers = false;
 let score = 0; //score variable
 let questionCounter = 0; //variable for question answer
 let availableQuestions = [];
@@ -77,6 +77,23 @@ getNewQuestion = () => {
         const number = choice.dataset["number"]; //access attributes
         choice.innerText = currentQuestion["choice" + number];
     });
+
+    availableQuestions.splice(questionIndex, 1);
+
+    acceptingAnswers = true;
 };
+
+choices.forEach(choice => {
+    choice.addEventListener("click", e => {
+        if(!acceptingAnswers) return;
+
+        acceptingAnswers = false;
+
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset["number"];
+
+        getNewQuestion();
+    })
+})
 //call function
 startGame();
