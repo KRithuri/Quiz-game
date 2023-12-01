@@ -105,6 +105,11 @@ choices.forEach(choice => {
 
         const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
+        //call increment function
+        if(classToApply === 'correct'){
+            incrementScore(CORRECT_BONUS);
+        }
+
         selectedChoice.parentElement.classList.add(classToApply);
 
         //delay for displaying color
