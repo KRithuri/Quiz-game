@@ -98,13 +98,17 @@ choices.forEach(choice => {
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
 
-        const classToApply = 'incorrect';
-        if(selectedAnswer == currentQuestion.answer){
-            classToApply = 'correct';
-        }
+        const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
-        console.log();
-        getNewQuestion();
+        selectedChoice.parentElement.classList.add(classToApply);
+
+        //delay for displaying color
+        setTimeout( () =>{
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+        }, 1000);
+     
+        
     })
 })
 //call function
