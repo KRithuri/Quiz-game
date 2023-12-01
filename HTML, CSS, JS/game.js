@@ -116,5 +116,12 @@ choices.forEach(choice => {
         
     })
 })
+
+//function to increment score
+incrementScore = num => {
+    score += num;
+    scoreText.innerText = score;
+}
+
 //call function
 startGame();
