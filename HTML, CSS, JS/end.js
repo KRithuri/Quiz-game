@@ -1,8 +1,10 @@
 const username = document.getElementById('username'); //fetch username
 const saveScoreBtn = document.getElementById('saveScoreBtn');  //fetch saveScoreBtn
+const mostRecentScore = localStorage.getItem('mostRecentScore'); //fetch most recent score
 
 username.addEventListener('keyup', () =>{
     console.log(username.value);
+    saveScoreBtn.disabled = !username.value;
 })
 
 //function to save high score
