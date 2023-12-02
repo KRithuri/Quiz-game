@@ -1,0 +1,1 @@
+const highScore = document.getElementById('highScoresList'); //fetch high scores list
