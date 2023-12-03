@@ -6,4 +6,6 @@
 - First 5 questions test on theory 
 - Last 5 questions test on programming
 - Score is displayed at the end.
+- There is a progress bar to let the user know how many questions still need to be answered.
+- You cannot skip a question.
 - Score is converted to percentage and displayed to user.
