@@ -9,3 +9,4 @@
 - There is a progress bar to let the user know how many questions still need to be answered.
 - You cannot skip a question.
 - Score is converted to percentage and displayed to user.
+- *HTML, CSS & JS have 2 program file
